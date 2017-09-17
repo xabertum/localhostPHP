@@ -68,6 +68,15 @@ and open the template in the editor.
         echo "7 + 13 = " . sum(7,13) . "<br>";
         echo "2 + 4 = " . sum(2,4);
         
+        $age = array("Peter" => 35, "Ben" => 37, "Joe" => 43);
+        
+        foreach ($age as $value) {
+            echo $value;
+        }
+        
+        
+        
+        
         ?>
     </body>
 </html>
