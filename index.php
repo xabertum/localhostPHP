@@ -73,8 +73,17 @@ and open the template in the editor.
         foreach ($age as $value) {
             echo $value;
         }
+        ?>
         
+        <br>
+        <br>
         
+        <?php
+        
+        foreach ($age as $x => $x_value) {
+            echo "Key= " .$x;
+            echo "<br>";
+        }
         
         
         ?>
