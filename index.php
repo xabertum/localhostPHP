@@ -80,7 +80,7 @@ and open the template in the editor.
         
         <?php
         
-        //Loop through an associate array
+        //Loop through an associative array
         foreach ($age as $x => $x_value) {
             echo "Key= " .$x;
             echo "<br>";
@@ -91,6 +91,7 @@ and open the template in the editor.
         $cars = array("Volvo", "BMW", "Toyota");
         $arrlenght = count($cars);
         
+        sort($cars);
         for ($x = 0; $x < $arrlenght; $x++) {
             echo $cars[$x];
             echo "<br>";
