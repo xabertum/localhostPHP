@@ -68,8 +68,9 @@ and open the template in the editor.
         echo "7 + 13 = " . sum(7,13) . "<br>";
         echo "2 + 4 = " . sum(2,4);
         
-        $age = array("Peter" => 35, "Ben" => 37, "Joe" => 43);
         
+        //Loop through an associative array
+        $age = array("Peter" => 35, "Ben" => 37, "Joe" => 43);
         foreach ($age as $value) {
             echo $value;
         }
@@ -82,7 +83,7 @@ and open the template in the editor.
         
         //Loop through an associative array
         foreach ($age as $x => $x_value) {
-            echo "Key= " .$x;
+            echo "Key= " .$x . " Value= " .$x_value;
             echo "<br>";
         }
         
@@ -97,8 +98,7 @@ and open the template in the editor.
             echo "<br>";
         }
         
-        
-        
+               
         ?>
     </body>
 </html>
