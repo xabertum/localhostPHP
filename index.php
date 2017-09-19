@@ -57,48 +57,64 @@ and open the template in the editor.
         }
 
         setHeight();
-        
-        
+
         function sum($x, $y) {
             $z = $x + $y;
             return $z;
         }
-        
+
         echo "5 + 10 = " . sum(5, 10) . "<br>";
-        echo "7 + 13 = " . sum(7,13) . "<br>";
-        echo "2 + 4 = " . sum(2,4);
-        
-        
+        echo "7 + 13 = " . sum(7, 13) . "<br>";
+        echo "2 + 4 = " . sum(2, 4);
+
+
         //Loop through an associative array
         $age = array("Peter" => 35, "Ben" => 37, "Joe" => 43);
         foreach ($age as $value) {
             echo $value;
         }
         ?>
-        
+
         <br>
         <br>
-        
+
         <?php
-        
         //Loop through an associative array
         foreach ($age as $x => $x_value) {
-            echo "Key= " .$x . " Value= " .$x_value;
+            echo "Key= " . $x . " Value= " . $x_value;
             echo "<br>";
         }
-        
-        
+
+
         //Loop through an indexed array
         $cars = array("Volvo", "BMW", "Toyota");
         $arrlenght = count($cars);
-        
+
         sort($cars);
         for ($x = 0; $x < $arrlenght; $x++) {
             echo $cars[$x];
             echo "<br>";
         }
-        
-               
         ?>
+
+
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+            Name: <input type="text" name="fname">
+            <input type="submit">
+        </form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // collect value of input field
+    $name = $_REQUEST['fname'];
+    if (empty($name)) {
+        echo "Name is empty";
+    } else {
+        echo $name;
+    }
+}
+?>
+
+
     </body>
 </html>
